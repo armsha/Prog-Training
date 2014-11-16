@@ -4,10 +4,14 @@ Se nedanstående för träningsmaterial:
 
 Online-domare:
 --------------
-https://projecteuler.net/ \n
+https://projecteuler.net/
+
 https://open.kattis.com/
+
 https://www.hackerrank.com/domains/algorithms/warmup
+
 http://www.spoj.com/
+
 http://ncpc.idi.ntnu.no/
 
 Teori:
