@@ -21,6 +21,9 @@ http://web.stanford.edu/class/cs97si/
 Coursera:
 ---------
 https://www.coursera.org/course/algo
+
 https://www.coursera.org/course/algo2
+
 https://www.coursera.org/course/algs4partI
+
 https://www.coursera.org/course/algs4partII
