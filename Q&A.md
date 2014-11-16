@@ -8,4 +8,4 @@ Fråga
 
 Svar
 ----
-Jajemän! -Arman 16 nov. 2014
+Måste du verkligen fråga en sådan fråga? -Arman 16 nov. 2014
