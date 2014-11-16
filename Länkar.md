@@ -18,6 +18,8 @@ Teori:
 ------
 http://web.stanford.edu/class/cs97si/
 
+Er närmsta algoritmbok...
+
 Coursera:
 ---------
 https://www.coursera.org/course/algo
