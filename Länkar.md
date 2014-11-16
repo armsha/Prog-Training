@@ -4,7 +4,7 @@ Se nedanstående för träningsmaterial:
 
 Online-domare:
 --------------
-https://projecteuler.net/ \\
+https://projecteuler.net/ \n
 https://open.kattis.com/
 https://www.hackerrank.com/domains/algorithms/warmup
 http://www.spoj.com/
