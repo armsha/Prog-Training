@@ -2,6 +2,10 @@ Länkar
 ======
 Se nedanstående för träningsmaterial:
 
+Referenser-Programspråk:
+------------------------
+http://www.cplusplus.com/reference/
+
 Online-domare:
 --------------
 https://projecteuler.net/
