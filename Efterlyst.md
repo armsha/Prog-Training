@@ -23,5 +23,8 @@ Wanted, Implemented or Alive:
 - Bellman-Ford
 - Johnson
 - Floyd-Warshall
-- Smart NPC (Vertex cover, TSP,  Knapsack, ...)
-- 
+- Smart NPC (Vertex cover, TSP,  Knapsack, Max Cut, ...)
+- Simplex
+- Hungarian Algorithm
+- Convex Hull
+- Geometry with BST (KD-träd m.m.)
