@@ -3,7 +3,7 @@ Wanted, Implemented or Alive:
 - KMP
 - Closest Pair
 - Prim
-- Kruskal
+- Kruskal (med Union-Find)
 - Dijkstra ((n+m)log(n)-varianten)
 - Kosaraju
 - 2SAT
@@ -12,5 +12,16 @@ Wanted, Implemented or Alive:
 - Union-Find
 - Extended GCD
 - Inversioncount
-- Median_with_heap
+- Median with heap
+- Karger
+- Topologisk Sortering
+- BST-Rotation
+- Greedy (see Coursera, Stanford algo 2)
+- Everything DP
+- Knapsack
+- Optimal BST
+- Bellman-Ford
+- Johnson
+- Floyd-Warshall
+- Smart NPC (Vertex cover, TSP,  Knapsack, ...)
 - 
