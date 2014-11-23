@@ -6,7 +6,7 @@ Prioritera C++!
 - Prim
 - Kruskal (med Union-Find)
 - Dijkstra ((n+m)log(n)-varianten)
-- Kosaraju
+- Kosaraju √
 - 2SAT
 - A*
 - Dinic
