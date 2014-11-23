@@ -29,3 +29,4 @@ Prioritera C++!
 - Hungarian Algorithm
 - Convex Hull
 - Geometry with BST (KD-träd m.m.)
+- Fleury
