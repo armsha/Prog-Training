@@ -1,12 +1,12 @@
 Wanted, Implemented or Alive:
 =============================
 Prioritera C++!
-- KMP √
+- KMP √ (A.Sh)
 - Closest Pair
 - Prim
 - Kruskal (med Union-Find)
 - Dijkstra ((n+m)log(n)-varianten)
-- Kosaraju √
+- Kosaraju √ (A.Sh)
 - 2SAT
 - A*
 - Dinic
