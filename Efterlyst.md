@@ -1,7 +1,7 @@
 Wanted, Implemented or Alive:
 =============================
 Prioritera C++!
-- KMP √ (A.Sh)
+- KMP √ \textit{(A.Sh)}
 - Closest Pair
 - Prim
 - Kruskal (med Union-Find)
