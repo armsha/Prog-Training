@@ -1,4 +1,3 @@
-
 //Fills in prefix table T for search word W
 void KMP_table(int *W, int *T, int Wlen){
 	int pos=2, cnd=0;
