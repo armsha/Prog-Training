@@ -1,2 +1,5 @@
+23/11 2014:
+Pushat Kosaraju samt KMP till repot.
+
 16/11 2014:
 Startade upp Git-repo. för tävlingsträning i programmering. Förhoppningsvis kommer denna att användas.
