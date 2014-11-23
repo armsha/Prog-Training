@@ -2,6 +2,8 @@ Prog-Training
 =============
 Programmerings-träning inför SM! (Senaste nytt kommer alltid hamna här!)
 
+23 nov. 2014: Markera med bock alla de algoritmer på listan som implementerats, ange också vem som implementerat vad.
+
 20 nov. 2014: Lagt till Wanted-lista, målet är att implementera dessa och pusha på repot.
 
 Läxa till torsdag 27/11 2014: Lös ett par uppgifter på Kattis, implementera valfri av Wanted-algoritmerna i C++. Ange gärna i loggbok vilken som just ni implementerar.
