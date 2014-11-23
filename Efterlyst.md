@@ -1,7 +1,7 @@
 Wanted, Implemented or Alive:
 =============================
 Prioritera C++!
-- KMP
+- KMP √
 - Closest Pair
 - Prim
 - Kruskal (med Union-Find)
