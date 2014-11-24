@@ -38,6 +38,8 @@ http://www.topcoder.com/
 
 Teori:
 ------
+http://contest-wiki.csc.kth.se/index.php/Main_Page
+
 http://web.stanford.edu/class/cs97si/
 
 http://sv.wikibooks.org/wiki/T%C3%A4vlingsprogrammering
