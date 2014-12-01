@@ -30,3 +30,6 @@ Prioritera C++!
 - Convex Hull
 - Geometry with BST (KD-träd m.m.)
 - Fleury
+- Rabin-Karp
+- Aho-Corasick
+- Commentz-Walter
