@@ -2,6 +2,8 @@ Prog-Training
 =============
 Programmerings-träning inför SM! (Senaste nytt kommer alltid hamna här!)
 
+1 dec. 2014: Uppdaterade Efterlyst.md
+
 28 nov. 2014: Snöflingor, snöflingor, betafunktionen och mer snöflingor. Annars inget nytt.
 
 Läxa till torsdag 4/12 2014: Lös uppgifterna Honeycomb (tips: DP) och Veci (tips: leta i algorithm-headern i STL). Kom ikapp med tidigare läxor.
