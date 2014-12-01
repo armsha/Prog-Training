@@ -1,6 +1,7 @@
 Wanted, Implemented or Alive:
 =============================
 Prioritera C++!
+Titta på http://en.wikipedia.org/wiki/List_of_algorithms för en lista på intressanta algoritmer.
 - KMP √ (A.Sh)
 - Closest Pair
 - Prim
@@ -33,3 +34,16 @@ Prioritera C++!
 - Rabin-Karp
 - Aho-Corasick
 - Commentz-Walter
+- Fenwick Tree
+- Boyer-Moore
+- Ternary Search
+- Golden Section-Search
+- Trie
+- Push-Relabel
+- Boruvka
+- Tarjan (SCC)
+- Longest Increasing Subsequence (DP)
+- Longest Common Subsequence
+- Kadane
+- Shortest Common Supersequence
+- Ukkonen
