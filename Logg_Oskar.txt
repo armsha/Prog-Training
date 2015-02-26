@@ -1,1 +1,5 @@
-Loggbok för Oskar. Slit den med hälsan.
+
+2015-02-26
+Version 1 of KD-tree with nearest neighbour implemented.
+Information found at: http://astrometry.net/svn/trunk/documents/papers/dstn-review/papers/friedman1977.pdf
+
