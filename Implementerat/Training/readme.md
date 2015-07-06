@@ -36,7 +36,7 @@ or modifications of the testing system.
 * start.sh: Script to start a training session
 
 To allow training with a new or modified suite, copy the template in the *Suites* folder,
-or modify an existing file. Make sure to rename the file as **<abbreviation>.cpp**, where
+or modify an existing file. Make sure to rename the file as **\<abbreviation\>.cpp**, where
 the abbreviation is what should be entered when starting a new session.  
 Also make sure to fill in all the documentation correctly, and update the startup script.  
 A new row will have to be entered into the case of **start.sh**, allowing your new abbreviation. 
