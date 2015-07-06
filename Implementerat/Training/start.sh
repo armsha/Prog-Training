@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 supported=""\
-"(MaSA):\tMaximum subarray (Not implemented)\n"\
+"(MaSA):\tMaximum subarray\n"\
 "(BinS):\tBinary search (Not implemented)\n"\
 "(StrS):\tString search\n"\
 "(DfS):\tDepth-first search (Not implemented)\n"\
@@ -62,14 +62,14 @@ esac
 datum=`date "+%Y-%m-%d_%H:%M:%S"`
 printf "Date: $datum\n"
 
-dirname="$1_$datum"
+dirname="Sessions/$1_$datum"
 
 mkdir "$dirname"
 printf "Directory $dirname created!\n"
 
-cp Makefile "$dirname"
-cp tt_test.h "$dirname"
-cp "$1.cpp" "$dirname/test.cpp"
+cp Utilities/Makefile "$dirname"
+cp Utilities/tt_test.h "$dirname"
+cp "Suites/$1.cpp" "$dirname/test.cpp"
 printf "Files copied!\n"
 
 cd "$dirname"

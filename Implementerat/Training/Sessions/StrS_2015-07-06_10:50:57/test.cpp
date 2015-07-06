@@ -22,6 +22,39 @@
  */
 
 // Includes and namespace
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+/**
+ * Precompute the prefixfunction of P.
+ * Runs at O(m).
+ */
+vector<int> computePrefixes( const char P[], int m ){
+
+	vector<int> pi(m);
+
+	if ( m == 0 ) return pi;
+
+	pi[0] = 0;
+
+	int k = 0;
+	for (int i = 1; i < m; ++i)
+	{
+
+		while ( k>0 and P[k]!=P[i] )
+			k = pi[k];
+
+		if ( P[k]==P[i] )
+			k++;
+
+		pi[i] = k;
+	}
+
+	return pi;
+
+}
 
 /*
  * Method to implement
@@ -39,13 +72,33 @@
  */	
 int stringSearch( const char T[], int n, const char P[], int m ) {
 
+	if ( n<m or n==0 ) return -1;
+	if ( m == 0 ) return 0;
+
+	vector<int> pi = computePrefixes(P,m);
+
+	int k = 0;
+	for (int i = 0; i < n; ++i)
+	{
+
+		while ( k>0 and T[i]!=P[k] )
+			k = pi[k-1];
+		if ( k < 0 ) k = 0;
+
+		if ( T[i]==P[k] )
+			k++;
+
+		if ( k==m )
+			return i-m+1;
+	}
+
 	return -1;
 }
 
 /*
  * Results to enter when done.
- *	TIME: 		
- *	COMPLEXITY: 
+ *	TIME: Hours
+ *	COMPLEXITY: KMP - O(m + n) if correct
  */
 
 /* ------ Test Section ------ */
@@ -118,6 +171,11 @@ void testSmallPatternMismatch2(){
 	TT_assert_EQ( -1, res );
 }
 
+void testSmallPatternMismatch3(){
+	int res = stringSearch( "abcddd", 4, "ababc", 4 );
+	TT_assert_EQ( -1, res );
+}
+
 void testLargeTextsMatch(){
 	char T[1000];
 	char P[100];
@@ -149,6 +207,20 @@ void testLargeTextsMismatch(){
 	TT_assert_EQ( -1, res );
 }
 
+void testMediumMatch(){
+
+	int res = stringSearch( "ababababababc", 13, "abababc", 7 );
+	TT_assert_EQ( 6, res );
+
+}
+
+void testMediumMatch2(){
+
+	int res = stringSearch( "ababcababababc", 14, "abababc", 7 );
+	TT_assert_EQ( 7, res );
+
+}
+
 /* 
  * Main method
  * Runs all the tests, and prints the result
@@ -169,8 +241,11 @@ int main(int argc, char const *argv[])
 	TT_TEST(testSmallPatternMatch3);
 	TT_TEST(testSmallPatternMismatch);
 	TT_TEST(testSmallPatternMismatch2);
+	TT_TEST(testSmallPatternMismatch3);
 	TT_TEST(testLargeTextsMatch);
 	TT_TEST(testLargeTextsMismatch);
+	TT_TEST(testMediumMatch);
+	TT_TEST(testMediumMatch2);
 	TT_FINAL;
 
 	return 0;
