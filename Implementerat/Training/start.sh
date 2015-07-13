@@ -7,7 +7,7 @@ supported=""\
 "(DfS):\tDepth-first search (Not implemented)\n"\
 "(BfS):\tBredth-first search (Not implemented)\n"\
 "(TopS):\tTopological sort (Not implemented)\n"\
-"(ConH):\tConvex hull (Not implemented)\n"
+"(ConH):\tConvex hull\n"
 editor="sublime"
 
 
