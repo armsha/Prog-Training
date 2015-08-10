@@ -66,6 +66,27 @@ public:
 	vector<vertex*> vertices;
 };
 
+
+void DFS_visit( graph *G, vertex *v, int *t ){
+
+	v->discoveryT = *t;
+	*t = *t + 1;
+
+	v->colour = GRAY;
+	for ( unsigned int i = 0; i < v->neighbours.size(); i ++ ){
+		edge e = v->neighbours.at(i);
+		if ( e.target->colour == WHITE ){
+			e.target->predecessor = v->label;
+			DFS_visit( G, e.target, t );
+		}
+	}
+
+	v->colour = BLACK;
+	v->finishT = *t;
+	*t= *t+1;
+
+}
+
 /*
  * Method to implement
  *	DESCRIPTION: 
@@ -85,6 +106,17 @@ public:
  *		ordered in the vectors. *
  */	
 graph* DFS( graph *G ){
+
+	for ( unsigned int i = 0; i < G->vertices.size(); i ++ ){
+		vertex *v = G->vertices.at(i);
+		v->colour = WHITE;
+	}
+
+	int t = 0;
+
+	for ( vertex *v : G->vertices )
+		if ( v->colour == WHITE )
+			DFS_visit( G, v, &t );
 
 
 	return G;
