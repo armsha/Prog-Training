@@ -7,7 +7,11 @@ supported=""\
 "(DfS):\tDepth-first search (Not implemented)\n"\
 "(BfS):\tBredth-first search (Not implemented)\n"\
 "(TopS):\tTopological sort (Not implemented)\n"\
-"(ConH):\tConvex hull\n"
+"(SCC):\tStrongly connected component find (Not implemented)\n"\
+"(2SAT):\t2-Sat problem (Not implemented)\n"\
+"(ConH):\tConvex hull\n"\
+"(Knap):\tKnapsack problem (Not implemented)\n"\
+"(Flow):\tMaximum flow problem (Not implemented)\n"
 editor="sublime"
 
 
@@ -53,6 +57,14 @@ case $1 in
 		printf "Topological sort\n";;
 	ConH )
 		printf "Convex hull\n";;
+    SCC )
+        printf "Strongly connected component find\n";;
+    2SAT )
+        printf "2-Sat problem\n";;
+    Knap )
+        printf "Knapsack problem\n";;
+    Flow )
+        printf "Maximal flow problem\n";;
 	* )
 		printf "Invalid algorithm-abbreviation\n"
 		bash "$0" "-usage"
