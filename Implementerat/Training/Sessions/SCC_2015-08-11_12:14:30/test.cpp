@@ -21,12 +21,18 @@
 
 // Includes and namespace
 #include <vector>
+#include <iostream>
+
+#define UNDEF -1
+#define MIN( a, b ) ( ((a)<(b))?(a):(b) )
 
 using namespace std;
 
 class edge;
 class vertex;
 class graph;
+
+
 
 class vertex
 {
@@ -36,6 +42,9 @@ public:
 
 	int label;
 	vector<edge> neighbours;
+	int index = UNDEF;
+	int lowlink;
+	bool onstack = false;
 	/* data */
 };
 
@@ -59,6 +68,46 @@ public:
 	vector<vertex*> vertices;
 };
 
+void strongconnect( vector<vector<int>> &components, vector< vertex* > &stack, int *index, vertex *nod ){
+
+	nod->index = *index;
+	nod->lowlink = *index;
+	*index = *index + 1;
+
+	stack.push_back(nod);
+	nod->onstack = true;
+
+	for ( edge e: nod->neighbours ){
+
+		if ( e.target->index == UNDEF )
+		{
+			strongconnect( components,stack,index,e.target );
+			nod->lowlink = MIN( nod->lowlink, e.target->lowlink );
+		} else if ( e.target->onstack )
+		{
+			nod->lowlink = MIN( nod->lowlink, e.target->index );
+		}
+
+	}
+
+	if ( nod->lowlink == nod->index )
+	{
+		vector<int> component;
+		vertex *v;
+		do{
+			v = stack.back();
+			component.push_back( v->label );
+
+			stack.pop_back();
+			v->onstack = false;
+
+		} while ( v->label != nod->label );
+
+		components.push_back(component);
+	}
+
+
+}
 
 /*
  * Method to implement
@@ -75,9 +124,16 @@ public:
  */	
 vector< vector<int> > SCC( graph G ){
 
-	// -- Implementation here ---
-
 	vector< vector<int> > components;
+
+	int index = 0;
+
+	vector< vertex* > stack;
+
+	for ( vertex *v : G.vertices )
+		if ( v->index == UNDEF )
+			strongconnect( components,stack,&index,v);
+
 
 	return components;
 
@@ -85,8 +141,8 @@ vector< vector<int> > SCC( graph G ){
 
 /*
  * Results to enter when done.
- *	TIME: <how many minutes did it take this time>
- *	COMPLEXITY: <what O is the implementation>
+ *	TIME: 50
+ *	COMPLEXITY: Tarjans O(n+e) linear
  */
 
 /* ------ Test Section ------ */

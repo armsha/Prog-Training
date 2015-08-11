@@ -24,7 +24,6 @@
 
 // Includes and namespace
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
