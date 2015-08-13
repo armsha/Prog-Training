@@ -66,6 +66,25 @@ public:
 	vector<vertex*> vertices;
 };
 
+
+void DFS_visit( vertex *v, graph *G, int *t ){
+
+	v->discoveryT = *t;
+	v->colour = GRAY;
+	*t = *t +1;
+
+	for ( edge e : v->neighbours )
+		if ( e.target->colour == WHITE ){
+			DFS_visit( e.target, G, t );
+			e.target->predecessor = v->label;
+		}
+
+	v->finishT = *t;
+	v->colour = BLACK;
+	*t = *t +1;
+
+}
+
 /*
  * Method to implement
  *	DESCRIPTION: 
@@ -86,14 +105,22 @@ public:
  */	
 graph* DFS( graph *G ){
 
+	for ( vertex *v : G->vertices )
+		v->colour = WHITE;
+
+	int t = 0;
+
+	for ( vertex *v : G->vertices )
+		if ( v->colour == WHITE )
+			DFS_visit( v, G, &t );	
 
 	return G;
 }
 
 /*
  * Results to enter when done.
- *	TIME: <how many minutes did it take this time>
- *	COMPLEXITY: <what O is the implementation>
+ *	TIME: 15
+ *	COMPLEXITY: recursive O(n+e)
  */
 
 /* ------ Test Section ------ */

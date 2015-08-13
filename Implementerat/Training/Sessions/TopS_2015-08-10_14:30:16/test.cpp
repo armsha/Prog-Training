@@ -24,6 +24,8 @@
 
 // Includes and namespace
 #include <vector>
+#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -66,6 +68,26 @@ public:
 	vector<vertex*> vertices;
 };
 
+void DFS_visit( vertex *v, int *t, vector<int>& order ){
+
+	v->colour = GRAY;
+	v->discoveryT = *t;
+	*t = *t + 1;
+
+	for ( edge e: v->neighbours )
+		if ( e.target->colour == WHITE ){
+			e.target->predecessor = v->label;
+			DFS_visit( e.target, t, order );
+		}
+
+	v->colour = BLACK;
+	v->finishT = *t;
+	*t = *t + 1;
+
+	order.push_back(v->label);
+
+}
+
 /*
  * Method to implement
  *	DESCRIPTION: 
@@ -81,13 +103,24 @@ vector<int> TopSort( graph *G ){
 
 	vector<int> order;
 
+	for ( vertex *v: G->vertices )
+		v->colour = WHITE;
+
+	int t = 0;
+
+
+	for ( vertex *v: G->vertices )
+		if ( v->colour == WHITE )
+			DFS_visit( v, &t, order );
+
+	reverse(order.begin(), order.end());
 	return order;
 }
 
 /*
  * Results to enter when done.
- *	TIME: <how many minutes did it take this time>
- *	COMPLEXITY: <what O is the implementation>
+ *	TIME: 20
+ *	COMPLEXITY: Simply uses DFS, O(n+e)
  */
 
 /* ------ Test Section ------ */
