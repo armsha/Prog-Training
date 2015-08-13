@@ -17,6 +17,25 @@
  *	OUTPUT: <@return stuff>
  */	
 // -- Implementation here ---
+int bin_knapsack(const int [] values, const int [] weights, int nrOfItems, int capacity) {
+	int m[n][capacity];
+	int i,j;
+	for (j = 0; j < capacity; j++) {
+		m[0][j] = 0;
+	}
+
+	for (i = 1; i < nrOfItems; i++) {
+		for (j = 0; j < capacity; j++) {
+			if (weights[i] <= j) {
+				m[i][j] = max( m[i-1,j], m[i-1,j-weights[i]]+v[i] );
+			} else {
+				m[i][j] = m[i-1][j];
+			}
+		}
+	}
+	return m[nrOfItems][capacity];
+
+}
 
 /*
  * Results to enter when done.
@@ -37,6 +56,14 @@
 // 	TT_FAIL;
 // }
 
+void testBinSackMaxCostSmallerThanConstraint() {
+	TT_assert_EQ( bin_knapsack([3,4,6,5], [2,1,6,5], 4, 1794), 18);
+}
+
+void testBinSackMaxCostLargerThanConstraint() {
+	TT_assert_EQ( bin_knapsack([10,7,25,24], [2,1,6,5], 4, 7), 34);
+}
+
 
 /* 
  * Main method
@@ -48,6 +75,9 @@ int main(int argc, char const *argv[])
 	TT_SETUP;
 	/* Tests */
 	// TT_TEST(testmethod);
+	TT_TEST( testBinSackMaxCostSmallerThanConstraint );
+	TT_TEST( testBinSackMaxCostLargerThanConstraint );
+
 	TT_FINAL;
 
 	return 0;
