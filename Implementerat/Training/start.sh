@@ -4,13 +4,13 @@ supported=""\
 "(MaSA):\tMaximum subarray\n"\
 "(BinS):\tBinary search (Not implemented)\n"\
 "(StrS):\tString search\n"\
-"(DfS):\tDepth-first search (Not implemented)\n"\
+"(DfS):\tDepth-first search\n"\
 "(BfS):\tBredth-first search (Not implemented)\n"\
-"(TopS):\tTopological sort (Not implemented)\n"\
-"(SCC):\tStrongly connected component find (Not implemented)\n"\
+"(TopS):\tTopological sort\n"\
+"(SCC):\tStrongly connected component find\n"\
 "(2SAT):\t2-Sat problem (Not implemented)\n"\
 "(ConH):\tConvex hull\n"\
-"(Knap):\tKnapsack problem (Not implemented)\n"\
+"(Knap):\tKnapsack problem (Not implemented?)\n"\
 "(Flow):\tMaximum flow problem (Not implemented)\n"
 editor="sublime"
 

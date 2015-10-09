@@ -1,0 +1,62 @@
+
+TARJANS (Strongly Connected Component) ALGORITHM:
+
+	Initialize graph, with indicators and indices on each vertex
+
+	Create component storage, and vertex stack, as well as shared index counter.
+
+	For each vertex:
+		If not visited:
+			visit it.
+
+	*VISIT a vertex, at a specific index point, and passing on the data structures.
+
+		Set index, and vision to the index and increase it. Add this vertex to stack and set indicator.
+
+		For each neighbour:
+			if not visited:
+				visit it.
+				set vision to min of current, and vision of the neighbour
+			else, if in stack:
+				set vision to min of current, and index of the neighbour
+
+		If index and vision are the same we are a root of a component:
+
+			Create a new component structure.
+
+			do:
+
+				pop the top of the stack.
+
+				mark as completed.
+
+				push to this component.
+
+				while top is not the current vertex
+
+
+			Enter the new component into the storage.
+
+
+
+2-SAT:
+
+	Create implication graph ( Write on the form x -> y, and let this be an edge betwen x and y ).
+		Here we will have nodes for both x and not-x.
+
+	Run TARJANS, or other SCC algorithm on this graph.
+
+		Check whether any SCC contains both x and not-x, if so no solution exists.
+
+	Create a condensation, having only one vertex per SCC, 
+		with edges to the other components if a vertex in this component has an edge to one in the other.
+
+	Topologically order the DAG created by the condensation. (Should already have been done by tarjans (in reverse).)
+
+	For each component in the reverse topological order, if the variables do not already have truth assignments, 
+		set all terms in the component to be true. This causes terms in the complementary component to be set false.
+
+	This truth assignment should satisfy the formula.
+
+
+
